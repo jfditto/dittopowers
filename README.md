@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astro Starter Kit: Blog
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
@@ -59,6 +60,34 @@ All commands are run from the root of the project, from a terminal:
 
 Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-## Credit
+## GitHub Pages deployment
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+This project includes a GitHub Actions workflow at `.github/workflows/deploy.yml` that publishes the site to the `gh-pages` branch whenever `main` is pushed.
+
+1. Create a GitHub repository for this project.
+2. Set the `origin` remote to your new repo, for example:
+
+```bash
+git remote set-url origin https://github.com/<your-username>/<your-repo>.git
+```
+
+3. Push the site to GitHub:
+
+```bash
+git push -u origin main
+```
+
+4. The workflow will automatically publish the static site.
+
+5. Visit your Pages site after the workflow completes:
+
+- `https://<your-username>.github.io/<your-repo>/`
+
+If you want to use a custom domain, configure it in GitHub Pages settings.
+
+## Files
+
+- `index.html` — home page
+- `about.html`, `services.html`, `contact.html` — content pages
+- `styles.css` — global styles
+- `assets/` — static assets
